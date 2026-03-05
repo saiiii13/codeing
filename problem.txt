@@ -1,0 +1,11 @@
+Write a function called inventory_tracker(items, new_item, new_qty, sell_item, sell_qty).
+items is a dictionary of shop items and quantities.
+new_item and new_qty are the item/quantity to add.
+sell_item and sell_qty are the item/quantity to sell.
+Your function should:
+Add the new item (or increase it if it already exists).
+Sell the given quantity from sell_item.
+If sell_item does not exist, print "Item not found".
+If trying to sell more than available, print "Not enough stock" and do not change it.
+Print all items and quantities.
+Return the updated dictionary and total stock count.

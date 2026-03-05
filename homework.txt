@@ -1,2 +1,2 @@
-Finish dictionarys part 1 and 2 in Coddy
-and Contact book application
+Document code.py
+Finish problem.txt
