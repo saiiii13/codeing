@@ -1,2 +1,3 @@
-Document code.py
-Finish problem.txt
+review class prop. and decorators
+create real world examples of diff types of class prop. and class methods\
+use ai to log into git and commit
