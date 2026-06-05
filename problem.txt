@@ -1,43 +1,80 @@
-Recap - Bank Account Manager
+Instance vs Class Variables
+
+
+
+Instance variables are unique to each object, while class variables are shared by all objects of the same class.
+
+Here is an example of a class with both types of variables
+
+class Student:
+    # Class variable - shared by all instances
+    school = "Python High School"
+    
+    def __init__(self, name, grade):
+        # Instance variables - unique to each student
+        self.name = name
+        self.grade = grade
+Create student objects:
+
+alice = Student("Alice", "A")
+bob = Student("Bob", "B")
+Access instance variables (unique to each object):
+
+print(alice.name)  # Alice
+print(bob.name)    # Bob
+print(alice.grade) # A
+print(bob.grade)   # B
+Access class variables (shared by all objects):
+
+print(alice.school)     # Python High School
+print(bob.school)       # Python High School
+print(Student.school)   # Python High School
+Now change the class variable:
+
+Student.school = "Python Academy"
+Check how the change affects all instances:
+
+print(alice.school)   # Python Academy
+print(bob.school)     # Python Academy
+Output:
+
+Alice
+Bob
+A
+B
+Python High School
+Python High School
+Python High School
+Python Academy
+Python Academy
+You can also create instance variables after object creation:
+
+alice.age = 16  # This creates an instance variable
+print(alice.age)  # 16
+# print(bob.age)  # This would cause an error - bob doesn't have age
+Key Difference: Instance variables (created with self.variable_name) are unique to each object, while class variables (defined directly in the class) are shared by all objects. Changing a class variable affects all instances.
 
 challenge icon
 Challenge
 
-Medium
-Create a complete BankAccount class that demonstrates object-oriented programming concepts including class variables, private attributes, properties, getters, setters, and methods. 
+Easy
+Complete a banking system.. You'll define a BankAccount class in one file and use it in another.
 
-1. Create a BankAccount class with:
-A class variable interest_rate set to 0.02 (2%)
-Private instance attributes for __owner_name and __balance
-A constructor that initializes these attributes
-2. Implement property getters and setters: 
-A read-only property owner_name that returns the account owner's name
-A property balance with:
-A getter that returns the current balance
-A setter that validates deposits (rejecting negative amounts)
-If validation fails, print: "Balance cannot be negative"
-3. Implement methods:
-deposit(amount) that:
-Adds to the balance if amount is positive
-Prints "Deposit amount must be positive" and returns False if amount is not positive
-Returns True on success
-withdraw(amount) that:
-Subtracts from the balance if amount is positive and funds are sufficient
-Prints "Withdrawal amount must be positive" and returns False if amount is not positive
-Prints "Insufficient funds" and returns False if amount exceeds balance
-Returns True on success
-apply_interest() that:
-Adds interest to the balance based on the class interest rate
-Returns the interest amount
-display_info() that prints account details in this format:
+You'll work with:
 
-Account Owner: [owner_name]
-Balance: $[balance]
-Interest Rate: [interest_rate]%
-Output Format Requirements
-All validation error messages must be printed exactly as specified
-The display_info() method must format the output exactly as shown above
-Interest rate should be displayed as a percentage (multiply by 100)
+bank_account.py: Define the BankAccount class with attributes and methods
+driver.py: Import the class, create accounts, and demonstrate class variables
+Follow the TODO comments in both files for step-by-step instructions. The comments will guide you through creating the class with proper variables, methods, and showing how class variables affect all instances.
+
 
 solution icon
 Solution
+
+Solution
+right icon
+Quiz icon
+Quiz
+
+8 Questions
+Skipped
+Go to quiz
